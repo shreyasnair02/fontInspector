@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "fontInspector",
+  "version": "0.1",
+  "description": "A Chrome extension to extract font information from webpages.",
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+
+  "action": {
+    "default_popup": "html/popup.html",
+    "default_icon": "assets/logo.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["storage", "scripting", "activeTab"]
+}

@@ -1,0 +1,30 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin flex-variant(
+  $justify-content,
+  $align-items,
+  $flex-direction: false,
+  $wrap: false
+) {
+  @if $flex-direction {
+    flex-direction: $flex-direction;
+  }
+  @if $wrap {
+    flex-wrap: $wrap;
+  }
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+@mixin flex() {
+  @include flex-variant(center, center);
+}
+
+// - Mobile: 375px
+// - Desktop: 1440px

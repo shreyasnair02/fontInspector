@@ -1,0 +1,54 @@
+$colors: (
+  light: (
+    text: (
+      100: hsl(var(--h), var(--s), 10%),
+      200: hsl(var(--h), var(--s), 15%),
+      300: hsl(var(--h), var(--s), 40%),
+    ),
+    surface: (
+      100: hsl(var(--h), var(--s), 50%),
+      300: hsl(var(--h), var(--s), 90%),
+      200: hsl(var(--h), var(--s), 95%),
+    ),
+  ),
+  dark: (
+    text: (
+      300: hsl(var(--h), var(--s), 80%),
+      200: hsl(var(--h), var(--s), 85%),
+      100: hsl(var(--h), var(--s), 90%),
+    ),
+    surface: (
+      200: hsl(var(--h), var(--s), 16%),
+      300: hsl(var(--h), var(--s), 19%),
+      100: hsl(var(--h), var(--s), 50%),
+    ),
+  ),
+);
+
+@mixin color-scheme($type: light) {
+  $colorMap: map-get($colors, $type);
+  @each $prop, $value in $colorMap {
+    @each $num, $val in $value {
+      --#{$prop}-#{$num}: #{$val};
+    }
+  }
+}
+
+:root {
+  --h: 200; // Adjust hue value
+  --s: 100%; // Adjust saturation value
+  @include color-scheme();
+}
+
+[color-scheme="dark"] {
+  @include color-scheme(dark);
+}
+[color-scheme="light"] {
+  @include color-scheme(light);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    @include color-scheme(dark);
+  }
+}
