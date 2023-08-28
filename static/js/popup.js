@@ -1,7 +1,6 @@
 const toggleButton = document.getElementById("toggleButton");
 let isActive = localStorage.getItem("extensionActive") === "true";
 
-// Function to toggle the content script activation
 async function toggleActivation() {
   isActive = !isActive;
 
@@ -22,20 +21,17 @@ async function toggleActivation() {
         document.removeEventListener("scroll", hideTooltip);
         document.getElementById("tooltip-ext").style.display = "none";
       },
-    }); // Remove event listener
+    });
     toggleButton.textContent = "Activate Font Tooltip";
   }
 }
 
-// Update the button text based on the stored state
 toggleButton.textContent = isActive
   ? "Deactivate Font Tooltip"
   : "Activate Font Tooltip";
 
-// Event listener for the toggle button
 toggleButton.addEventListener("click", toggleActivation);
 
-// Rest of your functions remain the same
 function getTabId() {
   return new Promise((resolve) => {
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
