@@ -1,8 +1,11 @@
-# FontInspector Chrome Extension
-
 <div style="text-align: center;">
-  <img src="./assets/logo.svg" alt="Extension Logo" width="100px">
+  <div style="display: inline-block;">
+    <img src="./assets/logo.svg" alt="Extension Logo" width="100px">
+    <h1>FontInspector Chrome Extension</h1>
+  </div>
 </div>
+
+
 The Font Tooltip Chrome Extension enhances your browsing experience by providing font information when hovering over text elements on web pages.
 
 ## Features
@@ -31,4 +34,8 @@ The Font Tooltip Chrome Extension enhances your browsing experience by providing
 - You can customize the extension's appearance and behavior by modifying the `popup.html`, `index.scss`, and `popup.js` files.
 - Adjust the color scheme, fonts, and styles to match your preferences.
 
-## Screenshots
+## Demo
+
+<div style="text-align: center;">
+  <img src="./demo/demo.gif" alt="Extension Demo">
+</div>
