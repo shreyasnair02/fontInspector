@@ -1,10 +1,9 @@
-<div style="text-align: center;">
-  <div style="display: inline-block;">
+<p align="center">
+  <p align="center">
     <img src="./assets/logo.svg" alt="Extension Logo" width="100px">
     <h1>FontInspector Chrome Extension</h1>
-  </div>
-</div>
-
+  </p>
+</p>
 
 The Font Tooltip Chrome Extension enhances your browsing experience by providing font information when hovering over text elements on web pages.
 
@@ -36,6 +35,6 @@ The Font Tooltip Chrome Extension enhances your browsing experience by providing
 
 ## Demo
 
-<div style="text-align: center;">
-  <img src="./demo/demo.gif" alt="Extension Demo">
-</div>
+<p align="center">
+  <img src="./demo/demo.gif" alt="Extension Demo" width="100%">
+</p>
